@@ -1,0 +1,21 @@
+name: "CI"
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+      - "v*"
+
+jobs:
+  test:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Download Example DocSet
+        run: |
+          curl -L https://github.com/SwiftDocOrg/DocSetUtil/releases/download/1.0.0/DocSetUtil.tgz | tar xvz
+      - name: Validate DocSet
+        uses: ./
+        with:
+          path: DocSetUtil.docset

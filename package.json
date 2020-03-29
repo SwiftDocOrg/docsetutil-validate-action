@@ -1,0 +1,35 @@
+{
+  "name": "docsetutil-validate-action",
+  "version": "1.0.0",
+  "description": "Validate a .docset bundle using docsetutil.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js",
+    "package": "ncc build index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwiftDocOrg/docsetutil-validate-action.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "docset",
+    "validation"
+  ],
+  "author": "Mattt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SwiftDocOrg/docsetutil-validate-action/issues"
+  },
+  "homepage": "https://github.com/SwiftDocOrg/docsetutil-validate-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.1.1",
+    "@actions/exec": "^1.0.3",
+    "@actions/io": "^1.0.2"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.5",
+    "eslint": "^6.3.0"
+  }
+}

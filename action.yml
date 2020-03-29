@@ -1,0 +1,9 @@
+name: "DocSetUtil Validate"
+description: "Validate a .docset bundle using docsetutil."
+inputs:
+  path:
+    description: "A path to the .docset bundle to validate"
+    required: true
+runs:
+  using: "node12"
+  main: "dist/index.js"
