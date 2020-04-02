@@ -19,3 +19,4 @@ jobs:
         uses: ./
         with:
           path: DocSetUtil.docset
+        continue-on-error: true
